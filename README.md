@@ -112,6 +112,7 @@ In this demo, we show how we can use our proposed techniques to binarize degrade
 
 ### Requirements
 - install requirements.txt
+- Download the best pre-trained model that has the highest PSNR from this [link](https://drive.google.com/file/d/1FKXAS8BetcB2pCwkOTNHIX4Rj5-tq-Ep/view) and store it into **weights** directory after creating it under **Binarization/TransformerEnhancer/** .
 
 # Conclusion
 There should be no bugs in this code, but if there is, we are sorry for that :') !!
