@@ -10,7 +10,7 @@ Folder Structure
     .
     ├── Binarization                # folder containing different threshold-based binarization methods
     │   ├── TransformerEnhancer     # Transformers method
-    │   ├── DEGAN.py                # GANs method
+    │   ├── DEGAN                   # GANs method
     │   ├── IntegralImages.py       # integral images method .py
     │   ├── Otsu.py                 # Otsu method .py
     │   └── ContrastEnhancement.py   # Contrast enhancement based method .py
@@ -122,7 +122,7 @@ In this demo, we show how we can use our proposed techniques to binarize degrade
 ### Requirements
 - install requirements.txt
 - for the transformer model, download the best pre-trained model that has the highest PSNR from this [link](https://drive.google.com/file/d/1FKXAS8BetcB2pCwkOTNHIX4Rj5-tq-Ep/view) and store it into **weights** directory after creating it under **Binarization/TransformerEnhancer/** .
-- then, download the trained weghts to directly use the model for the GAN document enhancement, it is important to save these weights in the subfolder named **weights**, in the **Binarization/DEGAN** folder. The link to download the weights is : https://drive.google.com/file/d/1J_t-TzR2rxp94SzfPoeuJniSFLfY3HM-/view?usp=sharing
+- then, download the trained weights to directly use the model for the GAN document enhancement, it is important to save these weights in the subfolder named **weights**, in the **Binarization/DEGAN** folder. The link to download the weights is : https://drive.google.com/file/d/1J_t-TzR2rxp94SzfPoeuJniSFLfY3HM-/view?usp=sharing
 
 # Conclusion
 There should be no bugs in this code, but if there is, we are sorry for that :') !!
