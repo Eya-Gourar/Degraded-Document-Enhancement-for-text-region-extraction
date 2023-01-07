@@ -50,9 +50,6 @@ def GAN_binarize(img) :
     bin_thresh = 0.95
     predicted_image = (predicted_image[:,:]>bin_thresh)*1
 
-    save_path = './demo/Output/DEGAN_Output/'
-
-    plt.imsave(save_path, predicted_image,cmap='gray')
 
     return predicted_image
 
