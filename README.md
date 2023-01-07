@@ -10,11 +10,7 @@ Folder Structure
     .
     ├── Binarization                # folder containing different threshold-based binarization methods
     │   ├── TransformerEnhancer     # Transformers method
-    │   |   ├── models              # implementation of transformer model
-    |   │   ├── weights             # pre-trained weights for the best model
-    |   │   ├── EnTR.py             # code to the binarization main function
-    |   |   .                       >> also contains train.py & test.py and other tools we used to obtain the pretrained model
-    |   |   .                          and put it into use.
+    │   ├── DEGAN.py                # GANs method
     │   ├── IntegralImages.py       # integral images method .py
     │   ├── Otsu.py                 # Otsu method .py
     │   └── ContrastEnhancement.py   # Contrast enhancement based method .py
