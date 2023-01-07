@@ -50,6 +50,11 @@ The grayscale enhancement method can effectively be used to widen the contrast b
 Pytorch implementation of the paper [DocEnTr: An End-to-End Document Image Enhancement Transformer](https://arxiv.org/abs/2201.10252). A scalable auto-encoder that uses vision transformers in its encoder and decoder parts. The degraded image is first divided into patches before entering to the encoder part. During encoding, the patches are mapped to a latent representation of tokens, where each token is associated with a degraded patch.
 Then, the tokens are passed to the decoder that outputs the enhanced version of patches.
 
+## 5. DE-GAN :
+
+This is an implementation for the paper [DE-GAN: A Conditional Generative Adversarial Network for Document Enhancement](https://ieeexplore.ieee.org/document/9187695)<br>
+DE-GAN is a conditional generative adversarial network designed to enhance the document quality before the recognition process. It could be used for document cleaning, binarization, deblurring and watermark removal. The weights are available to test the enhancement. 
+
 <table class="tg">
 <thead>
   <tr>
@@ -95,6 +100,14 @@ Then, the tokens are passed to the decoder that outputs the enhanced version of 
     <td class="tg-baqh"></td>
     <td class="tg-baqh"></td>
   </tr>
+    <tr>
+    <td class="tg-c3ow" rowspan="2">3</td>
+    <td class="tg-c3ow" rowspan="2"><br>GAN Enhancer</td>
+  </tr>
+  <tr>
+    <td class="tg-baqh"></td>
+    <td class="tg-baqh"></td>
+  </tr>
 </tbody>
 </table>
 
@@ -112,7 +125,8 @@ In this demo, we show how we can use our proposed techniques to binarize degrade
 
 ### Requirements
 - install requirements.txt
-- Download the best pre-trained model that has the highest PSNR from this [link](https://drive.google.com/file/d/1FKXAS8BetcB2pCwkOTNHIX4Rj5-tq-Ep/view) and store it into **weights** directory after creating it under **Binarization/TransformerEnhancer/** .
+- for the transformer model, download the best pre-trained model that has the highest PSNR from this [link](https://drive.google.com/file/d/1FKXAS8BetcB2pCwkOTNHIX4Rj5-tq-Ep/view) and store it into **weights** directory after creating it under **Binarization/TransformerEnhancer/** .
+- then, download the trained weghts to directly use the model for the GAN document enhancement, it is important to save these weights in the subfolder named **weights**, in the **Binarization/DEGAN** folder. The link to download the weights is : https://drive.google.com/file/d/1J_t-TzR2rxp94SzfPoeuJniSFLfY3HM-/view?usp=sharing
 
 # Conclusion
 There should be no bugs in this code, but if there is, we are sorry for that :') !!

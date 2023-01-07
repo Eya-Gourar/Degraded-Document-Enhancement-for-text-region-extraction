@@ -13,3 +13,10 @@ keras-ocr
 pytesseract
 tesseract-ocr
 tensrorflow
+imageio==2.8.0
+numpy-base==1.19.2
+scipy==1.4.1
+tensorboard==1.13.1
+tensorboard-plugin-wit==1.6.0.post3
+tensorflow==1.13.1
+tensorflow-estimator==1.13.0
