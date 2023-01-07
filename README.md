@@ -1,6 +1,6 @@
 # Degraded Document Enhancement for text region extraction
 
-This repo contains different approaches to binarize degraded documents using both simple thresholding techniques, such as : Otsu, Integral Images & Contrast Enhancement methods, and deep Learning threshold-based methods as in the use of Transformers in Binarization context. Then test OCR modules *pytesseract* , *keras_ocr* & *easyocr* on both original and binarized samples to see what output comes out.
+This repo contains different approaches to binarize degraded documents using both simple thresholding techniques, such as : Otsu, Integral Images & Contrast Enhancement methods, and deep Learning threshold-based methods as in the use of Transformers in Binarization context and GANs. Then test OCR modules *pytesseract* , *keras_ocr* & *easyocr* on both original and binarized samples to see what output comes out.
 
 Folder Structure 
 ================
