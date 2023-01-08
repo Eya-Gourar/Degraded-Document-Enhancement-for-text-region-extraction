@@ -113,7 +113,7 @@ About the Code :
 
 ### Data :
 
-We have gathered some sample degraded images of the DIBCO 2009 and H-DIBCO datasets and organized them in one folder  **demo/degraded/**. 
+We have gathered some sample degraded images of the DIBCO 2017 and H-DIBCO datasets and organized them in one folder  **demo/degraded/**. 
 We performed the proposed different techniques and saved outputs in their respective folders **demo/Output/**.
 
 ### Demo :
