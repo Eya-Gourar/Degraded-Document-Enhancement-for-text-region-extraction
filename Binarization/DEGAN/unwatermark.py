@@ -49,7 +49,11 @@ def unwatermark(img) :
     predicted_image=predicted_image.reshape(predicted_image.shape[0],predicted_image.shape[1])
 
 
-    return predicted_image
+    save_path = cwd+ '/demo/Output/ganOutput.png'
+    plt.imsave(save_path, predicted_image,cmap='gray')
 
+    result = plt.imread(save_path)
+
+    return result
 
 
