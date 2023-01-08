@@ -51,6 +51,7 @@ Then, the tokens are passed to the decoder that outputs the enhanced version of 
 This is an implementation for the paper [DE-GAN: A Conditional Generative Adversarial Network for Document Enhancement](https://ieeexplore.ieee.org/document/9187695)<br>
 DE-GAN is a conditional generative adversarial network designed to enhance the document quality before the recognition process. It could be used for document cleaning, binarization, deblurring and watermark removal. The weights are available to test the enhancement. 
 
+### Metrics Evaluation on DIBCO dataset
 <table class="tg">
 <thead>
   <tr>
