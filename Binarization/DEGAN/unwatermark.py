@@ -9,25 +9,26 @@ from PIL import Image
 import random
 from utils import *
 from models.models import *
+import cv2
 
 
 def unwatermark(img) :
     input_size = (256,256,1)
+    import os
+    cwd = os.getcwd()
+    #files = os.listdir(cwd)
+
+    model_path = cwd + "/Binarization/DEGAN/weights/watermark_rem_weights.h5"
+    generator.load_weights(model_path)
 
 
-    generator = generator = generator_model(biggest_layer=512)
-    generator.load_weights("weights/watermark_rem_weights.h5")
-
-
-    deg_image_path = "./demo/degraded/demo.jpg"
+    deg_image_path = cwd + "/demo/degraded/demo.jpg"
     cv2.imwrite(deg_image_path, img)
     deg_image = Image.open(deg_image_path)# /255.0
     deg_image = deg_image.convert('L')
-    deg_image.save('./demo/decurr_image.png')
+    deg_image.save(cwd+ '/demo/decurr_image.png')
 
-    test_image = plt.imread('curr_image.png')
-
-
+    test_image = plt.imread(cwd + '/demo/decurr_image.png')
 
 
     h =  ((test_image.shape [0] // 256) +1)*256 

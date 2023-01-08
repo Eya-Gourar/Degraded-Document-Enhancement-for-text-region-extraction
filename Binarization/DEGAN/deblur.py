@@ -7,8 +7,9 @@ import scipy.misc
 import math
 from PIL import Image
 import random
-from utils import *
-from models.models import *
+from .utils import *
+from .models.models import *
+import cv2
 
 
 
@@ -17,16 +18,21 @@ def blur(img) :
 
 
     generator = generator_model(biggest_layer=1024)
-    generator.load_weights("weights/deblur_weights.h5")
+    import os
+    cwd = os.getcwd()
+    #files = os.listdir(cwd)
+
+    model_path = cwd + "/Binarization/DEGAN/weights/deblur_weights.h5"
+    generator.load_weights(model_path)
 
 
-    deg_image_path = "./demo/degraded/demo.jpg"
+    deg_image_path = cwd + "/demo/degraded/demo.jpg"
     cv2.imwrite(deg_image_path, img)
     deg_image = Image.open(deg_image_path)# /255.0
     deg_image = deg_image.convert('L')
-    deg_image.save('./demo/decurr_image.png')
+    deg_image.save(cwd+ '/demo/decurr_image.png')
 
-    test_image = plt.imread('curr_image.png')
+    test_image = plt.imread(cwd + '/demo/decurr_image.png')
 
     h =  ((test_image.shape [0] // 256) +1)*256 
     w =  ((test_image.shape [1] // 256 ) +1)*256
@@ -45,8 +51,12 @@ def blur(img) :
     predicted_image=predicted_image[:test_image.shape[0],:test_image.shape[1]]
     predicted_image=predicted_image.reshape(predicted_image.shape[0],predicted_image.shape[1])
 
+    save_path = cwd+ '/demo/Output/ganOutput.png'
+    plt.imsave(save_path, predicted_image,cmap='gray')
 
-    return predicted_image 
+    result = plt.imread(save_path)
+
+    return result
 
 
 
