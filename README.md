@@ -101,8 +101,8 @@ DE-GAN is a conditional generative adversarial network designed to enhance the d
     <td class="tg-c3ow" rowspan="2"><br>GAN Enhancer</td>
   </tr>
   <tr>
-    <td class="tg-baqh"></td>
-    <td class="tg-baqh"></td>
+    <td class="tg-baqh">18.74</td>
+    <td class="tg-baqh">97.91 </td>
   </tr>
 </tbody>
 </table>
