@@ -1,6 +1,6 @@
 # Degraded Document Enhancement for text region extraction
 
-This repo contains different approaches to binarize degraded documents using both simple thresholding techniques, such as : Otsu, Integral Images & Contrast Enhancement methods, and deep Learning threshold-based methods as in the use of Transformers in Binarization context. Then test OCR modules *pytesseract* , *keras_ocr* & *easyocr* on both original and binarized samples to see what output comes out.
+This repo contains different approaches to binarize degraded documents using both simple thresholding techniques, such as : Otsu, Integral Images & Contrast Enhancement methods, and deep Learning threshold-based methods as in the use of Transformers in Binarization context and GANs. Then test OCR modules *pytesseract* , *keras_ocr* & *easyocr* on both original and binarized samples to see what output comes out.
 
 Folder Structure 
 ================
@@ -122,7 +122,7 @@ In this demo, we show how we can use our proposed techniques to binarize degrade
 ### Requirements
 - install requirements.txt
 - for the transformer model, download the best pre-trained model that has the highest PSNR from this [link](https://drive.google.com/file/d/1FKXAS8BetcB2pCwkOTNHIX4Rj5-tq-Ep/view) and store it into **weights** directory after creating it under **Binarization/TransformerEnhancer/** .
-- then, download the trained weights to directly use the model for the GAN document enhancement, it is important to save these weights in the subfolder named **weights**, in the **Binarization/DEGAN** folder. The link to download the weights is : https://drive.google.com/file/d/1J_t-TzR2rxp94SzfPoeuJniSFLfY3HM-/view?usp=sharing
+- then, download the trained weights to directly use the model for the GAN document enhancement, it is important to save these weights in the subfolder named **weights**, in the **Binarization/DEGAN** folder. Here is the [link](https://drive.google.com/file/d/1J_t-TzR2rxp94SzfPoeuJniSFLfY3HM-/view?usp=sharing) to download the weights.
 
 # Conclusion
 There should be no bugs in this code, but if there is, we are sorry for that :') !!
