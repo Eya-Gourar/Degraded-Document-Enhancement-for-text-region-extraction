@@ -1,10 +1,13 @@
 import torch
 from vit_pytorch import ViT
-from models.binae import BINMODEL
+from .models.binae import BINMODEL
 import numpy as np
 from einops import rearrange
 import cv2
 import matplotlib.pyplot as plt
+import sys
+import os
+
 
 THRESHOLD = 0.5 ## binarization threshold after the model output
 
@@ -40,7 +43,12 @@ model = BINMODEL(
 
 model = model.to(device)
 
-model_path = "weights/best-model_8_2018base_256_8(2).pt"
+import os
+
+cwd = os.getcwd()
+#files = os.listdir(cwd)
+
+model_path = cwd + "/Binarization/TransformerEnhancer/weights/best-model_8_2018base_256_8(2).pt"
 model.load_state_dict(torch.load(model_path))
 
 def split(im,h,w):
@@ -69,7 +77,7 @@ def Enhancer(img):
 
     filename = "demo/degraded/demo.jpg"
     cv2.imwrite(filename, img)
-    deg_image = cv2.imread(filename)
+    deg_image = cv2.imread(filename) / 255
 
     ## Split the image intop patches, an image is padded first to make it dividable by the split size
     h =  ((deg_image.shape[0] // 256) +1)*256 
@@ -121,3 +129,10 @@ def Enhancer(img):
     clean_image = merge_image(result, deg_image_padded.shape[0], deg_image_padded.shape[1])
     clean_image = clean_image[:deg_image.shape[0], :deg_image.shape[1],:]
     clean_image = (clean_image>THRESHOLD)*255
+
+    save_path = cwd+ '/demo/Output/TrEnOutput.png'
+    cv2.imwrite(save_path, clean_image)
+
+    output = cv2.imread(save_path)
+
+    return output
